@@ -81,9 +81,6 @@ nav {
 /* ═══════════════════════════════════
    HERO
 ═══════════════════════════════════ */
-/* ═══════════════════════════════════
-   HERO — PROFESSIONAL & CLEAN
-═══════════════════════════════════ */
 .hero {
   padding: 140px 5% 80px;
   background: linear-gradient(180deg, #F8FAFF 0%, #ffffff 100%);
@@ -170,13 +167,11 @@ nav {
   transition: all .2s; display: inline-flex; align-items: center; gap: 8px;
 }
 .btn-secondary:hover { border-color: var(--navy); }
-/* Stats */
 .hero-stats {
   display: flex; gap: 32px; flex-wrap: wrap;
   padding-top: 32px;
   border-top: 1px solid #E8ECF4;
 }
-.hero-stat-item {}
 .hero-stat-num {
   font-family: 'Syne', sans-serif;
   font-size: 24px; font-weight: 800;
@@ -184,10 +179,6 @@ nav {
 }
 .hero-stat-plus { color: var(--coral); }
 .hero-stat-lbl { font-size: 11px; color: var(--text3); font-weight: 500; text-transform: uppercase; letter-spacing: .06em; }
-.hero-stat-divider { display: none; }
-/* Tags */
-.hero-tags { display: none; }
-/* Right side — trust card */
 .hero-right {
   background: #fff;
   border: 1px solid #E8ECF4;
@@ -319,9 +310,7 @@ nav {
 ═══════════════════════════════════ */
 .main{padding:60px 5%;max-width:1200px;margin:0 auto}
 
-/* Section headers */
 .section-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
-.section-title-wrap{}
 .section-eyebrow2{
   font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
   margin-bottom:6px;
@@ -337,7 +326,7 @@ nav {
 }
 .see-all:hover{gap:8px}
 
-/* ═══ FEATURED POST (big card) ═══ */
+/* ═══ FEATURED POST ═══ */
 .featured-post{
   border-radius:24px;overflow:hidden;
   background:var(--navy);
@@ -465,7 +454,6 @@ nav {
   position:absolute;right:160px;top:-20px;
   opacity:.15;
 }
-.deals-banner-left{}
 .deals-banner-tag{
   font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
   color:rgba(255,255,255,.7);margin-bottom:8px;
@@ -577,30 +565,23 @@ nav {
 .newsletter-form button:hover{transform:translateY(-1px)}
 .newsletter-note{font-size:12px;color:rgba(255,255,255,.3);margin-top:14px}
 
-/* ═══ SIDEBAR STYLE POPULAR ═══ */
+/* ═══ POPULAR + SIDEBAR ═══ */
 .content-sidebar{display:grid;grid-template-columns:1fr 340px;gap:40px;margin-bottom:60px}
-.popular-posts{}
 .popular-post{
   display:flex;gap:16px;align-items:flex-start;
   padding:16px 0;border-bottom:1px solid var(--gray2);
-  cursor:pointer;
-  transition:all .2s;
+  cursor:pointer;transition:all .2s;
 }
 .popular-post:hover .popular-title{color:var(--coral)}
 .popular-post:last-child{border-bottom:none}
 .popular-num{
   font-family:'Syne',sans-serif;
   font-size:28px;font-weight:800;
-  color:var(--gray2);min-width:40px;
-  line-height:1;
+  color:var(--gray2);min-width:40px;line-height:1;
 }
-.popular-info{}
 .popular-cat{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
 .popular-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--navy);line-height:1.4;margin-bottom:6px;transition:color .2s}
 .popular-meta{font-size:11px;color:var(--text3)}
-
-/* Sidebar widgets */
-.sidebar{}
 .widget{
   border-radius:16px;background:#fff;
   border:1px solid var(--gray2);
@@ -614,21 +595,15 @@ nav {
 }
 .widget-aff-item{
   display:flex;align-items:center;gap:12px;
-  padding:10px 0;border-bottom:1px solid var(--gray2);
-  cursor:pointer;
+  padding:10px 0;border-bottom:1px solid var(--gray2);cursor:pointer;
 }
 .widget-aff-item:last-child{border-bottom:none}
 .widget-aff-icon{font-size:24px;flex-shrink:0}
 .widget-aff-name{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:2px}
 .widget-aff-comm{font-size:11px;color:var(--text3)}
-.widget-aff-btn{
-  margin-left:auto;font-size:11px;font-weight:700;
-  color:var(--coral);white-space:nowrap;
-  flex-shrink:0;
-}
+.widget-aff-btn{margin-left:auto;font-size:11px;font-weight:700;color:var(--coral);white-space:nowrap;flex-shrink:0;}
 .widget-tag{
-  display:inline-block;
-  padding:6px 14px;border-radius:20px;
+  display:inline-block;padding:6px 14px;border-radius:20px;
   font-size:12px;font-weight:600;
   background:var(--gray);color:var(--text2);
   margin:4px;cursor:pointer;transition:all .2s;
@@ -639,28 +614,21 @@ nav {
 .esim-banner {
   border-radius:24px;
   background:linear-gradient(135deg,#0D2A3A 0%,#0a3d2e 50%,#0D1B2A 100%);
-  padding:48px;
-  margin-bottom:60px;
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:40px;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
+  padding:48px;margin-bottom:60px;
+  display:grid;grid-template-columns:1fr auto;
+  gap:40px;align-items:center;
+  position:relative;overflow:hidden;
 }
 .esim-banner::before {
-  content:'';position:absolute;
-  top:-80px;right:200px;
+  content:'';position:absolute;top:-80px;right:200px;
   width:300px;height:300px;
   background:radial-gradient(circle,rgba(6,214,160,.2) 0%,transparent 70%);
   border-radius:50%;
 }
 .esim-tag {
   display:inline-flex;align-items:center;gap:6px;
-  background:rgba(6,214,160,.15);
-  border:1px solid rgba(6,214,160,.3);
-  color:var(--mint);
-  padding:6px 14px;border-radius:20px;
+  background:rgba(6,214,160,.15);border:1px solid rgba(6,214,160,.3);
+  color:var(--mint);padding:6px 14px;border-radius:20px;
   font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
   margin-bottom:16px;
 }
@@ -669,18 +637,11 @@ nav {
   font-size:clamp(22px,3vw,38px);font-weight:800;
   color:#fff;line-height:1.2;margin-bottom:12px;
 }
-.esim-sub {
-  font-size:15px;color:rgba(255,255,255,.65);
-  line-height:1.7;max-width:520px;margin-bottom:24px;
-}
-.esim-features {
-  display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;
-}
+.esim-sub {font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:520px;margin-bottom:24px;}
+.esim-features {display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
 .esim-feat {
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.12);
-  color:rgba(255,255,255,.85);
-  padding:6px 14px;border-radius:20px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.85);padding:6px 14px;border-radius:20px;
   font-size:12px;font-weight:600;
 }
 .esim-actions {display:flex;gap:12px;flex-wrap:wrap;align-items:center}
@@ -694,176 +655,64 @@ nav {
 .esim-btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(6,214,160,.5)}
 .esim-btn-secondary {
   color:rgba(255,255,255,.7);font-size:14px;font-weight:600;
-  display:inline-flex;align-items:center;gap:4px;
-  transition:color .2s;
+  display:inline-flex;align-items:center;gap:4px;transition:color .2s;
 }
 .esim-btn-secondary:hover{color:#fff}
-.esim-right {
-  display:flex;flex-direction:column;align-items:center;gap:16px;
-  flex-shrink:0;
-}
+.esim-right {display:flex;flex-direction:column;align-items:center;gap:16px;flex-shrink:0;}
 .esim-phone {
   width:140px;height:200px;
   background:linear-gradient(160deg,#1a3a5c,#0d2a1a);
-  border-radius:24px;
-  border:2px solid rgba(6,214,160,.3);
+  border-radius:24px;border:2px solid rgba(6,214,160,.3);
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 0 40px rgba(6,214,160,.2), 0 20px 60px rgba(0,0,0,.4);
+  box-shadow:0 0 40px rgba(6,214,160,.2),0 20px 60px rgba(0,0,0,.4);
   position:relative;overflow:hidden;
 }
 .esim-phone::before {
-  content:'';position:absolute;
-  top:0;left:50%;transform:translateX(-50%);
-  width:60px;height:6px;
-  background:rgba(255,255,255,.15);
-  border-radius:0 0 6px 6px;
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:60px;height:6px;background:rgba(255,255,255,.15);border-radius:0 0 6px 6px;
 }
-.esim-phone-screen {
-  text-align:center;padding:16px;
-}
-.esim-phone-status {
-  font-size:12px;font-weight:700;color:var(--mint);
-  margin-bottom:8px;
-}
-.esim-phone-carrier {
-  font-size:14px;font-weight:800;color:#fff;
-  font-family:'Syne',sans-serif;margin-bottom:6px;
-}
-.esim-phone-speed {
-  font-size:11px;color:rgba(255,255,255,.5);margin-bottom:10px;
-}
-.esim-phone-price {
-  background:var(--mint);color:var(--navy);
-  padding:5px 10px;border-radius:20px;
-  font-size:11px;font-weight:800;
-}
-.esim-flags {
-  font-size:18px;letter-spacing:4px;
-  text-align:center;line-height:1.8;
-}
-@media(max-width:768px){
-  .esim-banner {
-    grid-template-columns:1fr;
-    padding:28px;
-  }
-  .esim-right { flex-direction:row; justify-content:center; }
-  .esim-flags { font-size:14px; letter-spacing:2px; }
-}
-footer{
-  background:var(--navy);color:rgba(255,255,255,.6);
-  padding:60px 5% 30px;
-}
+.esim-phone-screen {text-align:center;padding:16px;}
+.esim-phone-status {font-size:12px;font-weight:700;color:var(--mint);margin-bottom:8px;}
+.esim-phone-carrier {font-size:14px;font-weight:800;color:#fff;font-family:'Syne',sans-serif;margin-bottom:6px;}
+.esim-phone-speed {font-size:11px;color:rgba(255,255,255,.5);margin-bottom:10px;}
+.esim-phone-price {background:var(--mint);color:var(--navy);padding:5px 10px;border-radius:20px;font-size:11px;font-weight:800;}
+.esim-flags {font-size:18px;letter-spacing:4px;text-align:center;line-height:1.8;}
+
+footer{background:var(--navy);color:rgba(255,255,255,.6);padding:60px 5% 30px;}
 .footer-inner{max-width:1200px;margin:0 auto}
-.footer-top{
-  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:40px;margin-bottom:48px;
-}
-.footer-logo{
-  font-family:'Syne',sans-serif;
-  font-size:20px;font-weight:800;color:#fff;
-  margin-bottom:12px;
-}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+.footer-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:12px;}
 .footer-brand p{font-size:13px;line-height:1.7;max-width:260px;margin-bottom:20px}
-.footer-col h4{
-  font-size:12px;font-weight:700;letter-spacing:.08em;
-  text-transform:uppercase;color:#fff;margin-bottom:16px;
-}
+.footer-col h4{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:16px;}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .footer-col ul li a{font-size:13px;transition:color .2s}
 .footer-col ul li a:hover{color:var(--coral)}
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.08);
-  padding-top:24px;
-  display:flex;align-items:center;justify-content:space-between;
-  font-size:12px;flex-wrap:wrap;gap:12px;
-}
-.footer-disclaimer{
-  font-size:11px;color:rgba(255,255,255,.25);
-  margin-top:12px;line-height:1.6;
-  border-top:1px solid rgba(255,255,255,.06);
-  padding-top:16px;
-}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;align-items:center;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:12px;}
+.footer-disclaimer{font-size:11px;color:rgba(255,255,255,.25);margin-top:12px;line-height:1.6;border-top:1px solid rgba(255,255,255,.06);padding-top:16px;}
 .social-links{display:flex;gap:10px}
-.social-link{
-  width:34px;height:34px;border-radius:8px;
-  background:rgba(255,255,255,.08);
-  display:flex;align-items:center;justify-content:center;
-  font-size:14px;transition:all .2s;
-}
+.social-link{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .2s;}
 .social-link:hover{background:var(--coral)}
 
-/* ═══ INDIVIDUAL POST PAGE ═══ */
+/* ═══ POST PAGE ═══ */
 .post-page{display:none}
 .post-page.active{display:block}
 .blog-list{display:block}
 .blog-list.hidden{display:none}
-
-.post-hero{
-  padding:100px 5% 60px;
-  background:linear-gradient(160deg,#FFF9F0,#F0F4FF);
-}
+.post-hero{padding:100px 5% 60px;background:linear-gradient(160deg,#FFF9F0,#F0F4FF);}
 .post-hero-inner{max-width:800px;margin:0 auto}
-.back-btn{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:13px;font-weight:600;color:var(--text2);
-  margin-bottom:24px;cursor:pointer;transition:color .2s;
-  background:none;border:none;font-family:'DM Sans',sans-serif;
-}
+.back-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text2);margin-bottom:24px;cursor:pointer;transition:color .2s;background:none;border:none;font-family:'DM Sans',sans-serif;}
 .back-btn:hover{color:var(--coral)}
-.post-page-cat{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:6px 14px;border-radius:20px;
-  font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-  margin-bottom:20px;
-}
-.post-page-title{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(28px,4vw,48px);font-weight:800;
-  color:var(--navy);line-height:1.2;margin-bottom:16px;
-}
-.post-page-meta{
-  display:flex;align-items:center;gap:20px;
-  font-size:13px;color:var(--text3);flex-wrap:wrap;margin-bottom:24px;
-}
-.post-page-excerpt{
-  font-size:18px;color:var(--text2);line-height:1.7;
-  font-weight:300;padding:20px;
-  border-left:4px solid var(--coral);
-  background:rgba(255,92,92,.04);
-  border-radius:0 12px 12px 0;
-}
-.post-content-wrap{
-  max-width:800px;margin:0 auto;
-  padding:48px 5%;
-}
-.post-content h2{
-  font-family:'Syne',sans-serif;
-  font-size:24px;font-weight:800;color:var(--navy);
-  margin:40px 0 16px;
-}
-.post-content h3{
-  font-family:'Syne',sans-serif;
-  font-size:18px;font-weight:700;color:var(--navy);
-  margin:28px 0 12px;
-}
-.post-content p{
-  font-size:16px;line-height:1.8;color:var(--text2);
-  margin-bottom:20px;
-}
-.post-content ul{
-  margin:0 0 20px 20px;
-}
-.post-content ul li{
-  font-size:16px;line-height:1.8;color:var(--text2);
-  margin-bottom:8px;
-}
-
-/* Affiliate box in post */
-.aff-box{
-  border-radius:16px;padding:24px;
-  margin:32px 0;display:flex;align-items:center;gap:20px;
-  flex-wrap:wrap;
-}
+.post-page-cat{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;}
+.post-page-title{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:16px;}
+.post-page-meta{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text3);flex-wrap:wrap;margin-bottom:24px;}
+.post-page-excerpt{font-size:18px;color:var(--text2);line-height:1.7;font-weight:300;padding:20px;border-left:4px solid var(--coral);background:rgba(255,92,92,.04);border-radius:0 12px 12px 0;}
+.post-content-wrap{max-width:800px;margin:0 auto;padding:48px 5%;}
+.post-content h2{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--navy);margin:40px 0 16px;}
+.post-content h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin:28px 0 12px;}
+.post-content p{font-size:16px;line-height:1.8;color:var(--text2);margin-bottom:20px;}
+.post-content ul{margin:0 0 20px 20px;}
+.post-content ul li{font-size:16px;line-height:1.8;color:var(--text2);margin-bottom:8px;}
+.aff-box{border-radius:16px;padding:24px;margin:32px 0;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
 .aff-box-travel{background:#FFF0F0;border:1.5px solid #FFCFCF}
 .aff-box-tech{background:#F0F8FF;border:1.5px solid #C0E0FF}
 .aff-box-deals{background:#F0FFF8;border:1.5px solid #AAEEDD}
@@ -871,13 +720,7 @@ footer{
 .aff-box-info{flex:1}
 .aff-box-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:4px}
 .aff-box-desc{font-size:13px;color:var(--text2);line-height:1.6}
-.aff-box-btn{
-  padding:12px 24px;border-radius:10px;
-  font-size:13px;font-weight:700;border:none;cursor:pointer;
-  font-family:'DM Sans',sans-serif;transition:all .2s;
-  white-space:nowrap;
-  display:flex;align-items:center;gap:6px;
-}
+.aff-box-btn{padding:12px 24px;border-radius:10px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:6px;}
 .aff-btn-travel{background:var(--coral);color:#fff}
 .aff-btn-tech{background:var(--sky);color:#fff}
 .aff-btn-deals{background:var(--mint);color:#fff}
@@ -915,46 +758,25 @@ footer{
   .footer-bottom{flex-direction:column;text-align:center}
   .aff-box{flex-direction:column;text-align:center}
   .content-sidebar{grid-template-columns:1fr}
+  .esim-banner{grid-template-columns:1fr;padding:28px;}
+  .esim-right{flex-direction:row;justify-content:center;}
 }
 @media(max-width:480px){
   .deals-grid{grid-template-columns:1fr}
   .hero-stats{gap:20px}
 }
 
-/* Search bar */
-.search-wrap{
-  max-width:600px;margin:0 auto 48px;
-  position:relative;
-}
-.search-input{
-  width:100%;padding:16px 20px 16px 52px;
-  border-radius:14px;border:1.5px solid var(--gray2);
-  font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text);
-  outline:none;background:#fff;
-  box-shadow:var(--shadow);transition:all .2s;
-}
+.search-wrap{max-width:600px;margin:0 auto 48px;position:relative;}
+.search-input{width:100%;padding:16px 20px 16px 52px;border-radius:14px;border:1.5px solid var(--gray2);font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text);outline:none;background:#fff;box-shadow:var(--shadow);transition:all .2s;}
 .search-input:focus{border-color:var(--coral);box-shadow:0 0 0 4px rgba(255,92,92,.1)}
-.search-icon{
-  position:absolute;left:18px;top:50%;transform:translateY(-50%);
-  color:var(--text3);font-size:18px;
-}
+.search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:18px;}
 
-/* Toast */
-#toast{
-  position:fixed;bottom:80px;left:50%;
-  transform:translateX(-50%) translateY(20px);
-  background:var(--navy);color:#fff;
-  padding:12px 24px;border-radius:10px;
-  font-size:14px;font-weight:600;z-index:9999;
-  opacity:0;transition:all .3s;pointer-events:none;
-  box-shadow:0 8px 32px rgba(0,0,0,.3);white-space:nowrap;
-}
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;z-index:9999;opacity:0;transition:all .3s;pointer-events:none;box-shadow:0 8px 32px rgba(0,0,0,.3);white-space:nowrap;}
 </style>
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<!-- ════ NAVBAR ════ -->
+<!-- NAVBAR -->
 <nav id="navbar">
   <a href="#" onclick="showBlog(event)" class="nav-logo">
     Yasska<span class="nav-logo-dot">.</span>
@@ -967,9 +789,6 @@ footer{
     <a href="#" onclick="filterCat('deals',event)" id="nav-deals">🔥 Deals</a>
   </div>
   <div style="display:flex;align-items:center;gap:10px">
-    <a href="#" onclick="openTravelSite(event)" style="display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:20px;border:1.5px solid var(--gray2);font-size:13px;font-weight:600;color:var(--text2);transition:all .2s;background:#fff" onmouseover="this.style.borderColor='var(--coral)';this.style.color='var(--coral)'" onmouseout="this.style.borderColor='var(--gray2)';this.style.color='var(--text2)'">
-      ✈️ Yasska Travel
-    </a>
     <a href="#newsletter" class="nav-cta">Get Free Deals 🎁</a>
   </div>
   <div class="nav-hamburger" onclick="toggleBlogMenu()">
@@ -977,39 +796,28 @@ footer{
   </div>
 </nav>
 
-<!-- ════ BLOG LIST ════ -->
+<!-- BLOG LIST -->
 <div class="blog-list" id="blog-list">
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-
-      <!-- LEFT -->
       <div class="hero-left">
         <div class="hero-eyebrow">
           <span class="hero-eyebrow-dot"></span>
-          Trusted travel &amp; tech advice since 2023
+          Trusted travel and tech advice since 2023
         </div>
-
         <h1 class="hero-h1">
           <span class="h1-guide">Your Guide to</span>
-          <span class="h1-travel">Smarter Travel</span>
-          <span class="h1-amp">&amp;</span>
-          <span class="h1-tech">Better <span class="h1-deals">Tech Deals</span></span>
+          <span class="h1-travel">Welcome To Yasska</span>
+          <span class="h1-amp"> </span>
+          <span class="h1-tech">Travel and <span class="h1-deals">Tech Deals</span></span>
         </h1>
-
         <p class="hero-sub">Independent reviews, expert tips and honest recommendations — helping thousands of readers <strong>save money</strong> on flights, hotels, laptops and more every week.</p>
-
         <div class="hero-actions">
-          <a href="#posts" class="btn-primary">
-            Read Latest Posts
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#deals" class="btn-secondary">
-            View Top Deals
-          </a>
+          <a href="#posts" class="btn-primary">Read Latest Posts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#deals" class="btn-secondary">View Top Deals</a>
         </div>
-
         <div class="hero-stats">
           <div class="hero-stat-item">
             <div class="hero-stat-num">120<span class="hero-stat-plus">+</span></div>
@@ -1030,13 +838,11 @@ footer{
         </div>
       </div>
 
-      <!-- RIGHT: Latest posts card -->
       <div class="hero-right">
         <div class="hero-right-header">
           <span class="hero-right-title">Latest Articles</span>
           <span class="hero-right-badge">New This Week</span>
         </div>
-
         <div class="hero-card hero-card-featured" onclick="openPost(6)">
           <div class="hero-card-icon" style="background:#FFF0F0">📱</div>
           <div class="hero-card-body">
@@ -1082,13 +888,11 @@ footer{
           </div>
           <div class="hero-card-arrow">›</div>
         </div>
-
         <div class="hero-right-footer">
           <span class="hero-right-footer-text">Showing 5 of 120+ articles</span>
           <a href="#posts" class="hero-right-footer-link">View all →</a>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -1106,14 +910,11 @@ footer{
 
   <!-- MAIN -->
   <div class="main" id="posts">
-
-    <!-- Search -->
     <div class="search-wrap reveal">
       <span class="search-icon">🔍</span>
       <input class="search-input" type="text" placeholder="Search posts, reviews, deals..." oninput="searchPosts(this.value)" id="search-input"/>
     </div>
 
-    <!-- Featured Post -->
     <div class="reveal" id="featured-wrap">
       <div class="featured-post" onclick="openPost(0)">
         <div class="featured-bg"></div>
@@ -1136,7 +937,6 @@ footer{
       </div>
     </div>
 
-    <!-- Posts Grid -->
     <div class="section-hdr reveal">
       <div class="section-title-wrap">
         <div class="section-eyebrow2" style="color:var(--coral)">LATEST POSTS</div>
@@ -1145,23 +945,17 @@ footer{
       <a href="#" class="see-all">View all posts →</a>
     </div>
 
-    <div class="posts-grid" id="posts-grid">
-      <!-- Posts injected by JS -->
-    </div>
+    <div class="posts-grid" id="posts-grid"></div>
 
-    <!-- Deals Banner -->
     <div class="deals-banner reveal" id="deals">
       <div class="deals-banner-left">
         <div class="deals-banner-tag">💰 Affiliate Picks</div>
-        <div class="deals-banner-title">Today's Best Travel & Tech Deals</div>
+        <div class="deals-banner-title">Today's Best Travel and Tech Deals</div>
         <div class="deals-banner-sub">Handpicked offers updated every week. We earn a small commission — at no extra cost to you.</div>
       </div>
-      <a href="https://www.skyscanner.net?ref=yasska" target="_blank" class="deals-banner-btn">
-        🔍 Compare Flights Now →
-      </a>
+      <a href="https://www.skyscanner.net?ref=yasska" target="_blank" class="deals-banner-btn">🔍 Compare Flights Now →</a>
     </div>
 
-    <!-- Deals Grid -->
     <div class="section-hdr reveal">
       <div class="section-title-wrap">
         <div class="section-eyebrow2" style="color:var(--orange)">AFFILIATE PICKS</div>
@@ -1210,7 +1004,6 @@ footer{
         <div class="deal-commission comm-tools">💰 Up to 20% commission</div>
         <button class="deal-btn deal-btn-tools" onclick="window.open('https://www.airalo.com?ref=yasska','_blank')">Get Your eSIM →</button>
       </div>
-
     </div>
 
     <!-- eSIM BANNER -->
@@ -1223,7 +1016,7 @@ footer{
           <span class="esim-feat">✅ 190+ countries</span>
           <span class="esim-feat">✅ Instant activation</span>
           <span class="esim-feat">✅ No contracts</span>
-          <span class="esim-feat">✅ Works on iPhone & Android</span>
+          <span class="esim-feat">✅ Works on iPhone and Android</span>
           <span class="esim-feat">✅ From £2/day</span>
           <span class="esim-feat">✅ Keep your home number</span>
         </div>
@@ -1254,9 +1047,7 @@ footer{
             <div class="section-h2">Most Popular Posts</div>
           </div>
         </div>
-        <div id="popular-list" class="reveal">
-          <!-- injected by JS -->
-        </div>
+        <div id="popular-list" class="reveal"></div>
       </div>
       <div class="sidebar reveal reveal-delay-1">
         <div class="widget">
@@ -1322,13 +1113,10 @@ footer{
       <span class="newsletter-emoji">📬</span>
       <h2>Get Weekly Deals in Your Inbox</h2>
       <p>Join 12,000+ readers getting the best travel deals, tech reviews and money-saving tips every week. Free forever.</p>
-      <form name="blog-newsletter" method="POST" data-netlify="true" onsubmit="handleBlogNewsletter(event)">
-        <input type="hidden" name="form-name" value="blog-newsletter"/>
-        <div class="newsletter-form">
-          <input type="email" name="email" placeholder="Enter your email address" required/>
-          <button type="submit">Subscribe Free 🎁</button>
-        </div>
-      </form>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" id="nl-email"/>
+        <button onclick="handleBlogNewsletter()">Subscribe Free 🎁</button>
+      </div>
       <div class="newsletter-note">No spam ever. Unsubscribe anytime. 📧</div>
     </div>
 
@@ -1375,13 +1163,12 @@ footer{
             <li><a href="#">Contact</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Affiliate Disclosure</a></li>
-            <li><a href="#" onclick="openTravelSite(event)">← Yasska Travel</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2025 Yasska Blog. All rights reserved.</span>
-        <span style="color:rgba(255,255,255,.3)">Built with ❤️ for travellers & tech lovers</span>
+        <span style="color:rgba(255,255,255,.3)">Built with ❤️ for travellers and tech lovers</span>
       </div>
       <div class="footer-disclaimer">
         ⚠️ <strong>Affiliate Disclosure:</strong> Some links on this blog are affiliate links. If you click and make a purchase, we may earn a small commission at no extra cost to you. We only recommend products and services we genuinely believe in. Thank you for supporting Yasska Blog!
@@ -1391,7 +1178,7 @@ footer{
 
 </div><!-- /blog-list -->
 
-<!-- ════ INDIVIDUAL POST PAGE ════ -->
+<!-- POST PAGE -->
 <div class="post-page" id="post-page">
   <div class="post-hero">
     <div class="post-hero-inner">
@@ -1412,306 +1199,79 @@ footer{
 
 <div id="toast"></div>
 
-<!-- ════ TRAVEL SITE OVERLAY ════ -->
-<div id="travel-overlay" style="display:none;position:fixed;inset:0;z-index:99999;flex-direction:column;">
-  <!-- Top bar -->
-  <div style="background:var(--navy);height:52px;display:flex;align-items:center;padding:0 20px;gap:14px;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,.3)">
-    <button onclick="closeTravelSite()" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--coral),var(--orange));color:#fff;border:none;padding:9px 18px;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-      Back to Blog
-    </button>
-    <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:rgba(255,255,255,.6)">You are viewing</span>
-    <span style="font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:#fff">✈️ Yasska Travel</span>
-  </div>
-  <!-- iframe -->
-  <iframe id="travel-iframe" src="" style="flex:1;border:none;width:100%;"></iframe>
-</div>
-
 <script>
-/* ══════════════════════════════════
-   BLOG DATA
-══════════════════════════════════ */
 const POSTS = [
   {
-    id:6,
-    cat:'travel',
-    emoji:'📱',
+    id:6,cat:'travel',emoji:'📱',
     title:'eSIM for World Travel 2025 — Never Pay Roaming Again',
     excerpt:'What is an eSIM, which countries it works in, and the best providers compared. Your complete guide.',
-    date:'Mar 1, 2025',
-    readTime:'8 min read',
-    affiliate:true,
-    content:`
-      <h2>What is an eSIM?</h2>
-      <p>An eSIM (embedded SIM) is a digital SIM card built into your phone. Instead of buying a physical SIM card at the airport, you simply scan a QR code and you're connected instantly — in seconds.</p>
-      <h2>Does My Phone Support eSIM?</h2>
-      <p>Most modern phones support eSIM. This includes iPhone XS and later, Samsung Galaxy S20 and later, Google Pixel 3 and later, and most 2020+ Android phones. Check your phone settings under "Mobile Data" or "SIM Cards" to confirm.</p>
-      <h2>Why eSIM is a Game Changer for Travellers</h2>
-      <p>Before eSIMs, you had two bad options when travelling: pay extortionate roaming charges (£5-15/day from UK networks) or hunt for a local SIM card at the destination. eSIM solves both problems instantly.</p>
-      <div class="aff-box aff-box-travel">
-        <div class="aff-box-icon">📱</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Airalo — Best eSIM for World Travel</div>
-          <div class="aff-box-desc">190+ countries covered. Instant activation. Regional and global plans available. From just £2/day.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-travel" onclick="window.open('https://www.airalo.com?ref=yasska','_blank')">Get Your eSIM →</button>
-      </div>
-      <h2>Best eSIM Providers Compared</h2>
-      <p><strong>Airalo</strong> — The market leader. 190+ countries, best prices, easiest app. Our top recommendation.</p>
-      <p><strong>Holafly</strong> — Great for unlimited data plans. Slightly pricier but no data caps.</p>
-      <p><strong>Nomad</strong> — Good for Asia and Pacific coverage. Competitive pricing.</p>
-      <p><strong>Yesim</strong> — Best for Middle East and Africa coverage, including Somalia and Kenya.</p>
-      <h2>eSIM for East Africa — Does It Work?</h2>
-      <p>Yes! eSIM works in Kenya, Ethiopia, Tanzania, Uganda, and many other African countries. Airalo offers specific East Africa regional plans from around £8 for 1GB/7 days — much cheaper than roaming.</p>
-      <div class="aff-box aff-box-deals">
-        <div class="aff-box-icon">🌍</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Africa eSIM Plans — From £8</div>
-          <div class="aff-box-desc">Regional data plans covering Kenya, Ethiopia, Tanzania and more. Instant activation before you fly.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-deals" onclick="window.open('https://www.airalo.com?ref=yasska','_blank')">View Africa Plans →</button>
-      </div>
-      <h2>How to Set Up Your eSIM — Step by Step</h2>
-      <p>1. Buy your eSIM plan on Airalo before you travel</p>
-      <p>2. You receive a QR code by email instantly</p>
-      <p>3. Go to Settings → Mobile Data → Add eSIM</p>
-      <p>4. Scan the QR code</p>
-      <p>5. Activate when you land — connected in seconds! ✅</p>
-      <h2>How Much Does eSIM Cost vs Roaming?</h2>
-      <p>Typical UK roaming charge: £5-15/day. Airalo eSIM: £2-8/day with much better data allowances. For a 2-week trip, eSIM can save you £50-200 compared to roaming.</p>
-      <h2>Can I Keep My UK Number?</h2>
-      <p>Yes — your UK SIM stays in your phone. You can still receive calls and texts on your UK number. The eSIM is just for data (and calls if you choose). Use WhatsApp and iMessage over the eSIM data.</p>
-      <div class="aff-box aff-box-travel">
-        <div class="aff-box-icon">📱</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Ready to Try eSIM?</div>
-          <div class="aff-box-desc">Get your first eSIM on Airalo. 190+ countries, instant activation, no contracts.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-travel" onclick="window.open('https://www.airalo.com?ref=yasska','_blank')">Get Airalo eSIM →</button>
-      </div>
-    `
+    date:'Mar 1, 2025',readTime:'8 min read',affiliate:true,
+    content:`<h2>What is an eSIM?</h2><p>An eSIM (embedded SIM) is a digital SIM card built into your phone. Instead of buying a physical SIM card at the airport, you simply scan a QR code and you're connected instantly — in seconds.</p><h2>Does My Phone Support eSIM?</h2><p>Most modern phones support eSIM. This includes iPhone XS and later, Samsung Galaxy S20 and later, Google Pixel 3 and later, and most 2020+ Android phones.</p><h2>Why eSIM is a Game Changer for Travellers</h2><p>Before eSIMs, you had two bad options when travelling: pay extortionate roaming charges (£5-15/day from UK networks) or hunt for a local SIM card at the destination. eSIM solves both problems instantly.</p><div class="aff-box aff-box-travel"><div class="aff-box-icon">📱</div><div class="aff-box-info"><div class="aff-box-title">Airalo — Best eSIM for World Travel</div><div class="aff-box-desc">190+ countries covered. Instant activation. Regional and global plans available. From just £2/day.</div></div><button class="aff-box-btn aff-btn-travel" onclick="window.open('https://www.airalo.com?ref=yasska','_blank')">Get Your eSIM →</button></div><h2>Best eSIM Providers Compared</h2><p><strong>Airalo</strong> — The market leader. 190+ countries, best prices, easiest app. Our top recommendation.</p><p><strong>Holafly</strong> — Great for unlimited data plans. Slightly pricier but no data caps.</p><p><strong>Nomad</strong> — Good for Asia and Pacific coverage. Competitive pricing.</p><p><strong>Yesim</strong> — Best for Middle East and Africa coverage, including Somalia and Kenya.</p><h2>eSIM for East Africa — Does It Work?</h2><p>Yes! eSIM works in Kenya, Ethiopia, Tanzania, Uganda, and many other African countries. Airalo offers specific East Africa regional plans from around £8 for 1GB/7 days.</p><div class="aff-box aff-box-deals"><div class="aff-box-icon">🌍</div><div class="aff-box-info"><div class="aff-box-title">Africa eSIM Plans — From £8</div><div class="aff-box-desc">Regional data plans covering Kenya, Ethiopia, Tanzania and more. Instant activation before you fly.</div></div><button class="aff-box-btn aff-btn-deals" onclick="window.open('https://www.airalo.com?ref=yasska','_blank')">View Africa Plans →</button></div><h2>How to Set Up Your eSIM</h2><p>1. Buy your eSIM plan on Airalo before you travel. 2. You receive a QR code by email instantly. 3. Go to Settings, then Mobile Data, then Add eSIM. 4. Scan the QR code. 5. Activate when you land — connected in seconds!</p><h2>How Much Does eSIM Cost vs Roaming?</h2><p>Typical UK roaming charge: £5-15/day. Airalo eSIM: £2-8/day with much better data allowances. For a 2-week trip, eSIM can save you £50-200 compared to roaming.</p><div class="aff-box aff-box-travel"><div class="aff-box-icon">📱</div><div class="aff-box-info"><div class="aff-box-title">Ready to Try eSIM?</div><div class="aff-box-desc">Get your first eSIM on Airalo. 190+ countries, instant activation, no contracts.</div></div><button class="aff-box-btn aff-btn-travel" onclick="window.open('https://www.airalo.com?ref=yasska','_blank')">Get Airalo eSIM →</button></div>`
   },
   {
-    id:0,
-    cat:'travel',
-    emoji:'✈️',
+    id:0,cat:'travel',emoji:'✈️',
     title:'How to Find Cheap Flights to East Africa — Save Up to 60%',
     excerpt:'Insider tricks to book the cheapest flights from London to Nairobi, Mogadishu, and Addis Ababa.',
-    date:'Jan 15, 2025',
-    readTime:'8 min read',
-    affiliate:true,
-    content:`
-      <h2>Why East Africa Flights Are Expensive (And How to Beat the System)</h2>
-      <p>Flying from London to East Africa can cost anywhere from £400 to £1,200 return. The difference? Knowing when and where to book. After testing every major booking platform, here's exactly what works.</p>
-      <h2>1. Use Skyscanner's "Whole Month" View</h2>
-      <p>Instead of searching specific dates, use Skyscanner's calendar view to see the cheapest day in the entire month. This alone can save you £150-300 on a return ticket.</p>
-      <div class="aff-box aff-box-travel">
-        <div class="aff-box-icon">✈️</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Compare Flights on Skyscanner</div>
-          <div class="aff-box-desc">Find the cheapest flights to East Africa. Compare 100s of airlines instantly.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-travel" onclick="window.open('https://skyscanner.net?ref=yasska','_blank')">Search Now →</button>
-      </div>
-      <h2>2. Book 6-8 Weeks in Advance</h2>
-      <p>The sweet spot for East Africa routes is 6-8 weeks before departure. Too early and prices are high, too late and seats are gone. Set a price alert on Skyscanner and wait.</p>
-      <h2>3. Fly Via a Hub (Not Direct)</h2>
-      <p>Direct flights are almost always more expensive. Flying via Dubai, Doha, or Addis Ababa can save you £200-400. Ethiopian Airlines and Qatar Airways consistently offer the best hub connections.</p>
-      <h2>4. Clear Your Cookies Before Booking</h2>
-      <p>Flight booking sites use cookies to track your searches and sometimes increase prices when you return. Always search in incognito mode or clear cookies before booking.</p>
-      <div class="aff-box aff-box-deals">
-        <div class="aff-box-icon">🏨</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Book Your Hotel Too</div>
-          <div class="aff-box-desc">Bundle flights and hotels for extra savings. Free cancellation on most Booking.com stays.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-deals" onclick="window.open('https://booking.com?aid=yasska','_blank')">Find Hotels →</button>
-      </div>
-      <h2>5. Use the Yasska Travel Tool</h2>
-      <p>Our free flight search tool on yasska.com compares prices across all major airlines instantly. It takes 30 seconds and could save you hundreds of pounds.</p>
-      <h2>Bottom Line</h2>
-      <p>Finding cheap flights to East Africa isn't luck — it's strategy. Use the right tools, book at the right time, and you can consistently save 40-60% on your tickets.</p>
-    `
+    date:'Jan 15, 2025',readTime:'8 min read',affiliate:true,
+    content:`<h2>Why East Africa Flights Are Expensive (And How to Beat the System)</h2><p>Flying from London to East Africa can cost anywhere from £400 to £1,200 return. The difference? Knowing when and where to book.</p><h2>1. Use Skyscanner's "Whole Month" View</h2><p>Instead of searching specific dates, use Skyscanner's calendar view to see the cheapest day in the entire month. This alone can save you £150-300 on a return ticket.</p><div class="aff-box aff-box-travel"><div class="aff-box-icon">✈️</div><div class="aff-box-info"><div class="aff-box-title">Compare Flights on Skyscanner</div><div class="aff-box-desc">Find the cheapest flights to East Africa. Compare 100s of airlines instantly.</div></div><button class="aff-box-btn aff-btn-travel" onclick="window.open('https://skyscanner.net?ref=yasska','_blank')">Search Now →</button></div><h2>2. Book 6-8 Weeks in Advance</h2><p>The sweet spot for East Africa routes is 6-8 weeks before departure. Set a price alert on Skyscanner and wait.</p><h2>3. Fly Via a Hub</h2><p>Direct flights are almost always more expensive. Flying via Dubai, Doha, or Addis Ababa can save you £200-400. Ethiopian Airlines and Qatar Airways consistently offer the best hub connections.</p><div class="aff-box aff-box-deals"><div class="aff-box-icon">🏨</div><div class="aff-box-info"><div class="aff-box-title">Book Your Hotel Too</div><div class="aff-box-desc">Bundle flights and hotels for extra savings. Free cancellation on most Booking.com stays.</div></div><button class="aff-box-btn aff-btn-deals" onclick="window.open('https://booking.com?aid=yasska','_blank')">Find Hotels →</button></div><h2>Bottom Line</h2><p>Finding cheap flights to East Africa isn't luck — it's strategy. Use the right tools, book at the right time, and you can consistently save 40-60% on your tickets.</p>`
   },
   {
-    id:1,
-    cat:'tech',
-    emoji:'💻',
+    id:1,cat:'tech',emoji:'💻',
     title:'Best Laptops Under £500 in 2025 — Tested and Ranked',
     excerpt:'We tested 12 laptops under £500. Here are the only 4 worth buying this year.',
-    date:'Jan 22, 2025',
-    readTime:'10 min read',
-    affiliate:true,
-    content:`
-      <h2>What to Look For in a Budget Laptop</h2>
-      <p>Spending under £500 on a laptop doesn't mean compromising. In 2025, you can get excellent performance at this price point if you know what to prioritise.</p>
-      <h2>Our Top Pick: Acer Aspire 5</h2>
-      <p>The Acer Aspire 5 consistently tops our tests for value. With an AMD Ryzen 5 processor, 16GB RAM, and 512GB SSD, it handles everything from office work to light video editing.</p>
-      <div class="aff-box aff-box-tech">
-        <div class="aff-box-icon">📦</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Check Price on Amazon UK</div>
-          <div class="aff-box-desc">Acer Aspire 5 — currently £429 with free next-day delivery for Prime members.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-tech" onclick="window.open('https://amazon.co.uk?tag=yasska-21','_blank')">View Price →</button>
-      </div>
-      <h2>Runner Up: HP Pavilion 15</h2>
-      <p>The HP Pavilion 15 is our second choice. It has a stunning display and great build quality. Battery life of 9 hours makes it perfect for travel.</p>
-      <h2>Best for Students: Lenovo IdeaPad 3</h2>
-      <p>Lightweight, affordable, and reliable. The Lenovo IdeaPad 3 is the go-to for students on a tight budget. At under £350, it's the best value in this roundup.</p>
-      <h2>Should You Buy Refurbished?</h2>
-      <p>Buying a refurbished laptop from Amazon Renewed or Back Market can save you 30-50%. We've tested several and most arrive in perfect condition with a warranty.</p>
-    `
+    date:'Jan 22, 2025',readTime:'10 min read',affiliate:true,
+    content:`<h2>What to Look For in a Budget Laptop</h2><p>Spending under £500 on a laptop doesn't mean compromising. In 2025, you can get excellent performance at this price point if you know what to prioritise.</p><h2>Our Top Pick: Acer Aspire 5</h2><p>The Acer Aspire 5 consistently tops our tests for value. With an AMD Ryzen 5 processor, 16GB RAM, and 512GB SSD, it handles everything from office work to light video editing.</p><div class="aff-box aff-box-tech"><div class="aff-box-icon">📦</div><div class="aff-box-info"><div class="aff-box-title">Check Price on Amazon UK</div><div class="aff-box-desc">Acer Aspire 5 — currently £429 with free next-day delivery for Prime members.</div></div><button class="aff-box-btn aff-btn-tech" onclick="window.open('https://amazon.co.uk?tag=yasska-21','_blank')">View Price →</button></div><h2>Runner Up: HP Pavilion 15</h2><p>The HP Pavilion 15 has a stunning display and great build quality. Battery life of 9 hours makes it perfect for travel.</p><h2>Best for Students: Lenovo IdeaPad 3</h2><p>Lightweight, affordable, and reliable. The Lenovo IdeaPad 3 is the go-to for students on a tight budget. At under £350, it's the best value in this roundup.</p>`
   },
   {
-    id:2,
-    cat:'deals',
-    emoji:'🔥',
+    id:2,cat:'deals',emoji:'🔥',
     title:'7 Travel Apps That Will Save You Money Every Trip',
     excerpt:'Stop overpaying. These free apps have saved our readers over £2 million combined.',
-    date:'Feb 1, 2025',
-    readTime:'6 min read',
-    affiliate:true,
-    content:`
-      <h2>The Apps Every Traveller Needs</h2>
-      <p>The right travel apps can save you hundreds of pounds per trip. Here are the 7 we use on every journey.</p>
-      <h2>1. Skyscanner — Flights</h2>
-      <p>Still the best flight comparison app in 2025. The price alert feature is particularly powerful — set it and get notified when prices drop.</p>
-      <div class="aff-box aff-box-travel">
-        <div class="aff-box-icon">✈️</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Search Flights on Skyscanner</div>
-          <div class="aff-box-desc">Compare hundreds of airlines. Set price alerts. Save up to 60%.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-travel" onclick="window.open('https://skyscanner.net?ref=yasska','_blank')">Open Skyscanner →</button>
-      </div>
-      <h2>2. Booking.com — Hotels</h2>
-      <p>Best for hotel deals with free cancellation. The Genius loyalty programme unlocks exclusive discounts from your first booking.</p>
-      <h2>3. NordVPN — Security</h2>
-      <p>Essential for public WiFi at airports and hotels. Also lets you access streaming services from home when abroad. Currently 67% off.</p>
-      <div class="aff-box aff-box-deals">
-        <div class="aff-box-icon">🔒</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Get NordVPN — 67% Off</div>
-          <div class="aff-box-desc">Protect your data on public WiFi. Works on all devices. 30-day money back guarantee.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-deals" onclick="window.open('https://nordvpn.com?ref=yasska','_blank')">Get Deal →</button>
-      </div>
-      <h2>4. Google Translate — Communication</h2>
-      <p>The offline mode is a game-changer. Download languages before you travel and communicate anywhere without internet.</p>
-    `
+    date:'Feb 1, 2025',readTime:'6 min read',affiliate:true,
+    content:`<h2>The Apps Every Traveller Needs</h2><p>The right travel apps can save you hundreds of pounds per trip. Here are the 7 we use on every journey.</p><h2>1. Skyscanner — Flights</h2><p>Still the best flight comparison app in 2025. The price alert feature is particularly powerful — set it and get notified when prices drop.</p><div class="aff-box aff-box-travel"><div class="aff-box-icon">✈️</div><div class="aff-box-info"><div class="aff-box-title">Search Flights on Skyscanner</div><div class="aff-box-desc">Compare hundreds of airlines. Set price alerts. Save up to 60%.</div></div><button class="aff-box-btn aff-btn-travel" onclick="window.open('https://skyscanner.net?ref=yasska','_blank')">Open Skyscanner →</button></div><h2>2. Booking.com — Hotels</h2><p>Best for hotel deals with free cancellation. The Genius loyalty programme unlocks exclusive discounts from your first booking.</p><h2>3. NordVPN — Security</h2><p>Essential for public WiFi at airports and hotels. Also lets you access streaming services from home when abroad. Currently 67% off.</p><div class="aff-box aff-box-deals"><div class="aff-box-icon">🔒</div><div class="aff-box-info"><div class="aff-box-title">Get NordVPN — 67% Off</div><div class="aff-box-desc">Protect your data on public WiFi. Works on all devices. 30-day money back guarantee.</div></div><button class="aff-box-btn aff-btn-deals" onclick="window.open('https://nordvpn.com?ref=yasska','_blank')">Get Deal →</button></div>`
   },
   {
-    id:3,
-    cat:'review',
-    emoji:'⭐',
+    id:3,cat:'review',emoji:'⭐',
     title:'NordVPN Review 2025 — Is It Worth It for Travellers?',
-    excerpt:'We used NordVPN for 6 months across 12 countries. Here\'s our honest verdict.',
-    date:'Feb 8, 2025',
-    readTime:'7 min read',
-    affiliate:true,
-    content:`
-      <h2>Why Travellers Need a VPN</h2>
-      <p>Every time you connect to hotel WiFi or airport internet, you're putting your data at risk. A VPN encrypts your connection and keeps your banking details, passwords, and personal data safe.</p>
-      <h2>NordVPN Performance</h2>
-      <p>We tested NordVPN in the UK, Kenya, Somalia, UAE, and 8 other countries. Connection speeds were consistently fast — rarely more than 10% slower than without the VPN.</p>
-      <div class="aff-box aff-box-deals">
-        <div class="aff-box-icon">🔒</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">NordVPN — Best Travel VPN 2025</div>
-          <div class="aff-box-desc">Currently 67% off. Covers 6 devices. 30-day money back guarantee.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-deals" onclick="window.open('https://nordvpn.com?ref=yasska','_blank')">Get 67% Off →</button>
-      </div>
-      <h2>Verdict: 4.5/5 ⭐</h2>
-      <p>NordVPN is the best travel VPN we've tested. Fast, reliable, and easy to use. The price is very reasonable — especially on the 2-year plan.</p>
-    `
+    excerpt:"We used NordVPN for 6 months across 12 countries. Here's our honest verdict.",
+    date:'Feb 8, 2025',readTime:'7 min read',affiliate:true,
+    content:`<h2>Why Travellers Need a VPN</h2><p>Every time you connect to hotel WiFi or airport internet, you're putting your data at risk. A VPN encrypts your connection and keeps your banking details, passwords, and personal data safe.</p><h2>NordVPN Performance</h2><p>We tested NordVPN in the UK, Kenya, Somalia, UAE, and 8 other countries. Connection speeds were consistently fast — rarely more than 10% slower than without the VPN.</p><div class="aff-box aff-box-deals"><div class="aff-box-icon">🔒</div><div class="aff-box-info"><div class="aff-box-title">NordVPN — Best Travel VPN 2025</div><div class="aff-box-desc">Currently 67% off. Covers 6 devices. 30-day money back guarantee.</div></div><button class="aff-box-btn aff-btn-deals" onclick="window.open('https://nordvpn.com?ref=yasska','_blank')">Get 67% Off →</button></div><h2>Verdict: 4.5/5 ⭐</h2><p>NordVPN is the best travel VPN we've tested. Fast, reliable, and easy to use. The price is very reasonable — especially on the 2-year plan.</p>`
   },
   {
-    id:4,
-    cat:'guide',
-    emoji:'📖',
+    id:4,cat:'guide',emoji:'📖',
     title:'Complete Guide to Travel Insurance for Africa 2025',
     excerpt:'Everything you need to know before buying travel insurance for your Africa trip.',
-    date:'Feb 14, 2025',
-    readTime:'12 min read',
-    affiliate:false,
-    content:`
-      <h2>Do You Really Need Travel Insurance for Africa?</h2>
-      <p>Short answer: absolutely yes. Medical costs in East Africa can be extremely high for foreigners, and medical evacuation alone can cost £20,000-50,000.</p>
-      <h2>What to Look For</h2>
-      <p>The most important coverage areas are medical emergency, medical evacuation, trip cancellation, and baggage loss. Don't cut corners on medical coverage.</p>
-      <h2>Our Top Recommendations</h2>
-      <p>For Africa travel, we recommend policies that specifically include medical evacuation and cover political instability. Always read the exclusions carefully.</p>
-      <h2>How Much Should You Pay?</h2>
-      <p>A good 2-week Africa travel insurance policy should cost £40-80. Anything cheaper probably has significant gaps in coverage.</p>
-    `
+    date:'Feb 14, 2025',readTime:'12 min read',affiliate:false,
+    content:`<h2>Do You Really Need Travel Insurance for Africa?</h2><p>Short answer: absolutely yes. Medical costs in East Africa can be extremely high for foreigners, and medical evacuation alone can cost £20,000-50,000.</p><h2>What to Look For</h2><p>The most important coverage areas are medical emergency, medical evacuation, trip cancellation, and baggage loss. Don't cut corners on medical coverage.</p><h2>How Much Should You Pay?</h2><p>A good 2-week Africa travel insurance policy should cost £40-80. Anything cheaper probably has significant gaps in coverage.</p>`
   },
   {
-    id:5,
-    cat:'tech',
-    emoji:'📱',
+    id:5,cat:'tech',emoji:'📱',
     title:'Best Budget Phones for Travel 2025 — Under £300',
     excerpt:'Great cameras, long battery life, and tough builds. Our top travel phone picks.',
-    date:'Feb 20, 2025',
-    readTime:'9 min read',
-    affiliate:true,
-    content:`
-      <h2>What Makes a Good Travel Phone?</h2>
-      <p>For travel, you need three things: a great camera, long battery life, and durability. Here are our top picks under £300 that deliver all three.</p>
-      <h2>Our Top Pick: Samsung Galaxy A55</h2>
-      <p>The Samsung Galaxy A55 is the best travel phone under £300 in 2025. Excellent camera system, 5000mAh battery, and IP67 water resistance make it perfect for any destination.</p>
-      <div class="aff-box aff-box-tech">
-        <div class="aff-box-icon">📱</div>
-        <div class="aff-box-info">
-          <div class="aff-box-title">Samsung Galaxy A55 on Amazon</div>
-          <div class="aff-box-desc">Currently £279 on Amazon UK with free delivery. Best value travel phone of 2025.</div>
-        </div>
-        <button class="aff-box-btn aff-btn-tech" onclick="window.open('https://amazon.co.uk?tag=yasska-21','_blank')">Check Price →</button>
-      </div>
-    `
+    date:'Feb 20, 2025',readTime:'9 min read',affiliate:true,
+    content:`<h2>What Makes a Good Travel Phone?</h2><p>For travel, you need three things: a great camera, long battery life, and durability. Here are our top picks under £300 that deliver all three.</p><h2>Our Top Pick: Samsung Galaxy A55</h2><p>The Samsung Galaxy A55 is the best travel phone under £300 in 2025. Excellent camera system, 5000mAh battery, and IP67 water resistance make it perfect for any destination.</p><div class="aff-box aff-box-tech"><div class="aff-box-icon">📱</div><div class="aff-box-info"><div class="aff-box-title">Samsung Galaxy A55 on Amazon</div><div class="aff-box-desc">Currently £279 on Amazon UK with free delivery. Best value travel phone of 2025.</div></div><button class="aff-box-btn aff-btn-tech" onclick="window.open('https://amazon.co.uk?tag=yasska-21','_blank')">Check Price →</button></div>`
   }
 ];
 
 const CAT_COLORS = {
-  travel:  {badge:'badge-travel', thumb:'post-thumb-travel', eyebrow:'var(--coral)', pageStyle:'background:#FFF0F0;color:var(--coral)'},
-  tech:    {badge:'badge-tech',   thumb:'post-thumb-tech',   eyebrow:'var(--sky)',   pageStyle:'background:#F0F8FF;color:var(--sky)'},
-  deals:   {badge:'badge-deals',  thumb:'post-thumb-deals',  eyebrow:'var(--mint)',  pageStyle:'background:#F0FFF8;color:var(--mint)'},
-  review:  {badge:'badge-review', thumb:'post-thumb-review', eyebrow:'var(--orange)',pageStyle:'background:#FFF8F0;color:var(--orange)'},
-  guide:   {badge:'badge-guide',  thumb:'post-thumb-guide',  eyebrow:'var(--purple)',pageStyle:'background:#F5F0FF;color:var(--purple)'},
+  travel:  {badge:'badge-travel',thumb:'post-thumb-travel',eyebrow:'var(--coral)',pageStyle:'background:#FFF0F0;color:var(--coral)'},
+  tech:    {badge:'badge-tech',  thumb:'post-thumb-tech',  eyebrow:'var(--sky)',  pageStyle:'background:#F0F8FF;color:var(--sky)'},
+  deals:   {badge:'badge-deals', thumb:'post-thumb-deals', eyebrow:'var(--mint)', pageStyle:'background:#F0FFF8;color:var(--mint)'},
+  review:  {badge:'badge-review',thumb:'post-thumb-review',eyebrow:'var(--orange)',pageStyle:'background:#FFF8F0;color:var(--orange)'},
+  guide:   {badge:'badge-guide', thumb:'post-thumb-guide', eyebrow:'var(--purple)',pageStyle:'background:#F5F0FF;color:var(--purple)'},
 };
 
 let currentCat = 'all';
 
-/* ── Travel site overlay ── */
-function openTravelSite(e) {
-  if(e) e.preventDefault();
-  const overlay = document.getElementById('travel-overlay');
-  const iframe = document.getElementById('travel-iframe');
-  if(!iframe.src || iframe.src === window.location.href) {
-    iframe.src = 'horizons-travel_32.html';
-  }
-  overlay.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeTravelSite() {
-  document.getElementById('travel-overlay').style.display = 'none';
-  document.body.style.overflow = '';
-}
-
-/* ── Render posts ── */
 function renderPosts(posts) {
   const grid = document.getElementById('posts-grid');
   if (!posts.length) {
-    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text3);font-size:16px">😕 No posts found. Try a different search.</div>';
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text3);font-size:16px">No posts found. Try a different search.</div>';
     return;
   }
   grid.innerHTML = posts.map(p => {
     const c = CAT_COLORS[p.cat];
-    return `
-    <div class="post-card reveal" onclick="openPost(${p.id})">
-      <div class="post-thumb ${c.thumb}">
-        <span>${p.emoji}</span>
+    return `<div class="post-card reveal" onclick="openPost(${p.id})">
+      <div class="post-thumb ${c.thumb}"><span>${p.emoji}</span>
         <span class="post-cat-badge ${c.badge}">${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</span>
         ${p.affiliate ? '<span class="post-aff-badge">💰 Affiliate</span>' : ''}
       </div>
@@ -1725,18 +1285,14 @@ function renderPosts(posts) {
       </div>
     </div>`;
   }).join('');
-  // re-observe new cards
   document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
 }
 
-/* ── Render popular ── */
 function renderPopular() {
   const list = document.getElementById('popular-list');
-  const top = [...POSTS].slice(0,5);
-  list.innerHTML = top.map((p,i) => {
+  list.innerHTML = POSTS.slice(0,5).map((p,i) => {
     const c = CAT_COLORS[p.cat];
-    return `
-    <div class="popular-post" onclick="openPost(${p.id})">
+    return `<div class="popular-post" onclick="openPost(${p.id})">
       <div class="popular-num">0${i+1}</div>
       <div class="popular-info">
         <div class="popular-cat" style="color:${c.eyebrow}">${p.cat.toUpperCase()}</div>
@@ -1747,27 +1303,21 @@ function renderPopular() {
   }).join('');
 }
 
-/* ── Filter by category ── */
 function filterCat(cat, e) {
   if(e) e.preventDefault();
   currentCat = cat;
-  // update cat buttons
   document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
   const active = document.querySelector(`.cat-btn.${cat}`);
   if(active) active.classList.add('active');
-  // update nav links
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
   const navLink = document.getElementById('nav-' + cat);
   if(navLink) navLink.classList.add('active');
-  // filter
   const filtered = cat === 'all' ? POSTS : POSTS.filter(p => p.cat === cat);
   renderPosts(filtered);
-  // hide/show featured
   document.getElementById('featured-wrap').style.display = cat === 'all' ? 'block' : 'none';
   document.getElementById('search-input').value = '';
 }
 
-/* ── Search ── */
 function searchPosts(q) {
   const term = q.toLowerCase().trim();
   if(!term) { filterCat(currentCat); return; }
@@ -1779,13 +1329,13 @@ function searchPosts(q) {
   renderPosts(results);
 }
 
-/* ── Open individual post ── */
 function openPost(id) {
   const p = POSTS.find(x => x.id === id);
   if(!p) return;
   const c = CAT_COLORS[p.cat];
-  document.getElementById('post-cat-badge').style.cssText = p.cat + ';' + c.pageStyle + ';padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;';
-  document.getElementById('post-cat-badge').textContent = p.emoji + ' ' + p.cat.charAt(0).toUpperCase() + p.cat.slice(1);
+  const badge = document.getElementById('post-cat-badge');
+  badge.style.cssText = c.pageStyle + ';padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:inline-flex;';
+  badge.textContent = p.emoji + ' ' + p.cat.charAt(0).toUpperCase() + p.cat.slice(1);
   document.getElementById('post-title').textContent = p.title;
   document.getElementById('post-meta').innerHTML = `<span>📅 ${p.date}</span><span>⏱ ${p.readTime}</span>${p.affiliate ? '<span style="background:var(--yellow);color:var(--navy);padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700">💰 Contains affiliate links</span>' : ''}`;
   document.getElementById('post-excerpt').textContent = p.excerpt;
@@ -1795,7 +1345,6 @@ function openPost(id) {
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-/* ── Back to blog ── */
 function showBlog(e) {
   if(e) e.preventDefault();
   document.getElementById('blog-list').classList.remove('hidden');
@@ -1803,14 +1352,13 @@ function showBlog(e) {
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-/* ── Newsletter ── */
-function handleBlogNewsletter(e) {
-  e.preventDefault();
+function handleBlogNewsletter() {
+  const email = document.getElementById('nl-email');
+  if(!email.value) return;
   showToast('🎉 Subscribed! Welcome to Yasska Blog.');
-  e.target.reset();
+  email.value = '';
 }
 
-/* ── Toast ── */
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -1819,27 +1367,22 @@ function showToast(msg) {
   setTimeout(() => { t.style.opacity='0'; t.style.transform='translateX(-50%) translateY(20px)'; }, 3000);
 }
 
-/* ── Mobile menu ── */
 function toggleBlogMenu() {
   const links = document.querySelector('.nav-links');
-  links.style.display = links.style.display === 'flex' ? 'none' :
-    'flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 5%;gap:16px;border-bottom:1px solid var(--gray2);z-index:999;box-shadow:var(--shadow2)';
-  if(links.style.display !== 'none') {
+  if(links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
     links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 5%;gap:16px;border-bottom:1px solid var(--gray2);z-index:999;box-shadow:0 8px 40px rgba(13,27,42,.14)';
   }
 }
 
-/* ── Scroll reveal ── */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-/* ── Init ── */
 renderPosts(POSTS);
 renderPopular();
 </script>
-
-<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
