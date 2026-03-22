@@ -319,13 +319,16 @@
 
 <header>
   <a href="index.html" class="logo">Yaskka</a>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav>
+
     <a href="index.html">Home</a>
     <a href="business.html">Business</a>
     <a href="marketing.html">Marketing</a>
     <a href="review.html">Review</a>
-  </nav>
+    </nav>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -368,7 +371,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="logo">Yaskka</span>
+      <a href="index.html" class="logo" style="text-decoration:none;">Yaskka</a>
       <p>Your go-to source for business, marketing, and honest tech reviews in 2026.</p>
     </div>
     <div class="footer-col">
@@ -398,5 +401,41 @@
   </div>
 </footer>
 
+
+<script>
+(function() {
+  function initMenu() {
+    var btn = document.getElementById('hamburgerBtn');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    btn.onclick = function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.contains('open');
+      menu.classList.toggle('open');
+      btn.classList.toggle('open');
+      document.body.style.overflow = isOpen ? '' : 'hidden';
+    };
+    document.addEventListener('click', function(e) {
+      if (menu.classList.contains('open') && !menu.contains(e.target) && e.target !== btn) {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMenu);
+  } else {
+    initMenu();
+  }
+})();
+</script>
 </body>
 </html>
