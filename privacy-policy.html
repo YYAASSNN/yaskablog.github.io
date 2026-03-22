@@ -414,4 +414,51 @@
     &copy; 2026 Yaskka. All rights reserved. &nbsp;|&nbsp;
     <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);text-decoration:none;">Privacy</a> &nbsp;|&nbsp;
     <a href="terms.html" style="color:rgba(255,255,255,0.4);text-decoration:none;">Terms</a> &nbsp;|&nbsp;
-    <a href="affiliate-disclosure.html" style="color:rgba(255,255,25
+    <a href="affiliate-disclosure.html" style="color:#ffffff;text-decoration:none;">Affiliate Disclosure</a>
+  </div>
+</footer>
+
+<script>
+(function() {
+  function initMenu() {
+    var btn = document.getElementById('hamburgerBtn');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.contains('open');
+      if (isOpen) {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      } else {
+        menu.classList.add('open');
+        btn.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+    document.addEventListener('click', function(e) {
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+    var links = menu.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMenu);
+  } else {
+    initMenu();
+  }
+})();
+</script>
+</body>
+</html>
