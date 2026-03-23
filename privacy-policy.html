@@ -311,7 +311,7 @@
 <h2>Contact Form Data</h2>
 <p>If you contact us through our contact form or by email, we may receive your name, email address, and message content. We use this information only to respond to your enquiry and for basic record-keeping where necessary.</p>
 <h2>Data Retention</h2>
-<p>We retain personal information only for as long as necessary to fulfil the purposes described in this policy. You may request deletion of your data at any time by contacting us at <a href="/cdn-cgi/l/email-protection#a2cac7cececde2dbc3d1c9c9c38cc1cdcf"><span class="__cf_email__" data-cfemail="167e737a7a79566f77657d7d773875797b">[email&#160;protected]</span></a>.</p>
+<p>We retain personal information only for as long as necessary to fulfil the purposes described in this policy. You may request deletion of your data at any time by contacting us at <a href="mailto:hello@yaskka.com">hello@yaskka.com</a>.</p>
 <h2>Your Rights</h2>
 <ul>
   <li>Right to access the personal data we hold about you</li>
@@ -320,7 +320,7 @@
   <li>Right to lodge a complaint with a supervisory authority</li>
 </ul>
 <h2>Contact</h2>
-<p>If you have any questions about this Privacy Policy, you can contact us at <a href="/cdn-cgi/l/email-protection#4028252c2c2f003921332b2b216e232f2d"><span class="__cf_email__" data-cfemail="8ee6ebe2e2e1cef7effde5e5efa0ede1e3">[email&#160;protected]</span></a> or visit our <a href="contact.html">Contact page</a>.</p>
+<p>If you have any questions about this Privacy Policy, you can contact us at <a href="mailto:hello@yaskka.com">hello@yaskka.com</a> or visit our <a href="contact.html">Contact page</a>.</p>
 </div>
 
 <footer>
@@ -351,3 +351,42 @@
   <div class="footer-bottom">
     &copy; 2026 Yaskka. All rights reserved. &nbsp;|&nbsp;
     <a href="privacy-policy.html" style="color:#ffffff;text-decoration:none;">Priv
+<script>
+(function() {
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = menu.classList.contains('open');
+    if (isOpen) {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    } else {
+      menu.classList.add('open');
+      btn.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -308,7 +308,7 @@
 <h2>FTC Compliance</h2>
 <p>In accordance with the Federal Trade Commission (FTC) guidelines, we clearly disclose affiliate relationships. Sponsored or paid content will always be labelled as such.</p>
 <h2>Questions?</h2>
-<p>If you have any questions about our affiliate relationships or how we monetise our content, please contact us at <a href="/cdn-cgi/l/email-protection#543c3138383b142d35273f3f357a373b39"><span class="__cf_email__" data-cfemail="2b434e4747446b524a5840404a05484446">[email&#160;protected]</span></a> or visit our <a href="contact.html">Contact page</a>.</p>
+<p>If you have any questions about our affiliate relationships or how we monetise our content, please contact us at <a href="mailto:hello@yaskka.com">hello@yaskka.com</a> or visit our <a href="contact.html">Contact page</a>.</p>
 </div>
 
 <footer>
@@ -341,3 +341,42 @@
     <a href="privacy-policy.html" style="color:#ffffff;text-decoration:none;">Privacy</a> &nbsp;|&nbsp;
     <a href="terms.html" style="color:#ffffff;text-decoration:none;">Terms</a> &nbsp;|&nbsp;
     <a href="a
+<script>
+(function() {
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = menu.classList.contains('open');
+    if (isOpen) {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    } else {
+      menu.classList.add('open');
+      btn.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+</body>
+</html>
