@@ -290,20 +290,17 @@
 <div class="divider"></div>
 <p class="last-updated">Last updated: January 2026</p>
 <p>By accessing and using Yaskka ("the website"), you agree to be bound by these Terms and Conditions. Please read them carefully before using our site.</p>
+<p>Yaskka is an independent publisher and not a provider of the third-party tools or services featured on this website.</p>
+<h2>Informational Purposes Only</h2>
+<p>All content on Yaskka — including articles, reviews, comparisons, and guides — is for informational purposes only. It does not constitute professional, legal, financial, or technical advice. You should verify details directly with the relevant provider before making any purchase or decision.</p>
 <h2>Use of Content</h2>
-<p>All content on Yaskka — including articles, reviews, images, and guides — is for informational purposes only. You may not reproduce, republish, or distribute our content without prior written permission.</p>
+<p>You may not reproduce, republish, or distribute our content without prior written permission.</p>
 <h2>Accuracy of Information</h2>
-<p>We strive to ensure all content is accurate and up to date. However, Yaskka makes no warranties regarding the completeness, reliability, or accuracy of any information on this website. Prices, features, and availability of products mentioned may change without notice.</p>
+<p>We strive to ensure all content is accurate and up to date. However, Yaskka makes no warranties regarding the completeness, reliability, or accuracy of any information on this website. Prices, features, and availability of products mentioned may change without notice. Always verify current details directly with the relevant third-party provider before purchasing.</p>
 <h2>Affiliate Links Disclaimer</h2>
 <p>Yaskka participates in affiliate programmes. Some links on our website may be affiliate links, meaning we may earn a commission if you make a purchase through them at no extra cost to you. See our <a href="affiliate-disclosure.html">Affiliate Disclosure</a> for full details.</p>
-<h2>Independent Publisher</h2>
-<p>Yaskka is an independent publisher of informational content, reviews, and comparison articles. We do not directly provide, own, or operate the third-party products and services featured on this website unless clearly stated otherwise.</p>
-<h2>No Professional or Purchasing Guarantee</h2>
-<p>Content published on Yaskka is provided for general informational purposes only. While we aim to keep information accurate and up to date, readers should verify prices, features, terms, and service details directly with the provider before making a purchase or decision.</p>
-<h2>External Links</h2>
-<p>Our website may contain links to third-party websites. We have no control over the content or practices of those sites and accept no responsibility for them. Visiting external links is at your own risk.</p>
-<h2>Third-Party Websites and Services</h2>
-<p>Yaskka may link to third-party websites, platforms, and service providers. We are not responsible for the content, pricing, availability, policies, or actions of those third-party services. Any transaction, account creation, or purchase made through a third-party website is solely between you and that provider.</p>
+<h2>Third-Party Services and External Links</h2>
+<p>Yaskka is not responsible for third-party services or purchases made on external websites. Our website may contain links to third-party websites. We have no control over the content, practices, or availability of those sites and accept no responsibility for them. Visiting external links is at your own risk.</p>
 <h2>Limitation of Liability</h2>
 <p>Yaskka shall not be held liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on any information provided herein.</p>
 <h2>Changes to Terms</h2>
@@ -344,5 +341,47 @@
     <a href="affiliate-disclosure.html" style="color:#ffffff;text-decoration:none;">Affiliate Disclosure</a>
   </div>
 </footer>
+<script>
+(function() {
+  function initMenu() {
+    var btn = document.getElementById("hamburgerBtn");
+    var menu = document.getElementById("mobileMenu");
+    if (!btn || !menu) return;
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.contains("open");
+      if (isOpen) {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      } else {
+        menu.classList.add("open");
+        btn.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+    });
+    document.addEventListener("click", function(e) {
+      if (menu.classList.contains("open") && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    });
+    var links = menu.querySelectorAll("a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function() {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      });
+    }
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMenu);
+  } else {
+    initMenu();
+  }
+})();
+</script>
 </body>
 </html>

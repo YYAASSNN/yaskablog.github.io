@@ -289,25 +289,24 @@
 <div class="article-wrap">
 <div class="divider"></div>
 <p class="last-updated">Last updated: January 2026</p>
-<p>Welcome to <strong>Yaskka</strong> — an independent content website focused on business strategy, digital marketing insights, and practical digital product reviews. Our goal is to publish clear, useful, and well-researched content that helps readers make better online decisions.</p>
-<h2>Our Mission</h2>
-<p>Our mission is simple: to cut through the noise and publish practical content that is easy to understand, honest in tone, and genuinely helpful for business owners, entrepreneurs, marketers, and everyday users comparing digital tools.</p>
+<p>Yaskka is an independent content website publishing business, marketing, and digital product review content. We help readers make better decisions about the tools and strategies they use to build and grow online.</p>
+<h2>Who Runs Yaskka</h2>
+<p>Yaskka is an independent content website focused on business, marketing, and digital product reviews. We publish informational articles, comparisons, and affiliate-supported recommendations to help readers make better online decisions.</p>
 <h2>What We Cover</h2>
-<p>Yaskka covers topics such as website builders, web hosting, VPN services, eSIM providers, AI tools, digital workflows, online business trends, and marketing strategy. Some pages are educational articles, while others are product comparisons or review-based recommendations.</p>
 <ul>
-  <li><strong>Business Strategy</strong> — growth tactics, AI tools, and marketing trends for 2026</li>
-  <li><strong>Digital Marketing</strong> — SEO, video, personalization, data-driven campaigns and omnichannel</li>
-  <li><strong>Tech Reviews</strong> — researched reviews of VPNs, eSIM providers, hosting platforms, and AI website builders</li>
-  <li><strong>Digital Setup Guides</strong> — practical tutorials to help you build your online presence affordably</li>
+  <li><strong>Website builders</strong> — AI-powered builders and traditional platforms</li>
+  <li><strong>Web hosting</strong> — shared, cloud, and managed hosting reviews</li>
+  <li><strong>VPN services</strong> — privacy, speed, and value comparisons</li>
+  <li><strong>eSIM services</strong> — travel connectivity options for global users</li>
+  <li><strong>Digital business tools</strong> — AI, automation, and productivity platforms</li>
+  <li><strong>Marketing and business trends</strong> — strategy, SEO, and growth insights</li>
 </ul>
-<h2>How We Review and Recommend</h2>
-<p>Our content is based on research, feature comparisons, pricing analysis, product positioning, usability considerations, and overall value. Some articles may contain affiliate links, but affiliate relationships do not determine our editorial opinions.</p>
-<h2>How Yaskka Makes Money</h2>
-<p>Yaskka may earn commissions through affiliate links when readers choose to purchase a product or sign up for a service through links on this website. This comes at no extra cost to the reader and helps support the ongoing publication of free content.</p>
-<h2>Why Trust Yaskka?</h2>
-<p>We independently research, compare, and evaluate the products and services we write about. When we recommend a tool or service, it is because we believe it offers useful features, reasonable value, and relevance for the intended audience. Where affiliate links are used, we clearly disclose this in our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
-<h2>Contact</h2>
-<p>If you have a question, spot an error, or would like to discuss a partnership, please contact us at <a href="mailto:hello@yaskka.com">hello@yaskka.com</a> or visit our <a href="contact.html">Contact page</a>.</p>
+<h2>How We Make Money</h2>
+<p>Yaskka may earn commissions through affiliate links. This does not increase the price you pay, and it does not control our editorial opinions. See our <a href="affiliate-disclosure.html">Affiliate Disclosure</a> for full details.</p>
+<h2>Editorial Approach</h2>
+<p>We aim to make content clear, useful, and honest. Where a product is reviewed or recommended, we base our opinion on research, feature comparisons, pricing, ease of use, and overall value. Our content is carefully researched and compared — not influenced by commercial relationships.</p>
+<h2>Get in Touch</h2>
+<p>Have a question, suggestion, or want to work with us? Contact us at <a href="mailto:hello@yaskka.com">hello@yaskka.com</a> or visit our <a href="contact.html">Contact page</a>.</p>
 </div>
 
 <footer>
@@ -342,5 +341,47 @@
     <a href="affiliate-disclosure.html" style="color:#ffffff;text-decoration:none;">Affiliate Disclosure</a>
   </div>
 </footer>
+<script>
+(function() {
+  function initMenu() {
+    var btn = document.getElementById("hamburgerBtn");
+    var menu = document.getElementById("mobileMenu");
+    if (!btn || !menu) return;
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.contains("open");
+      if (isOpen) {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      } else {
+        menu.classList.add("open");
+        btn.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+    });
+    document.addEventListener("click", function(e) {
+      if (menu.classList.contains("open") && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    });
+    var links = menu.querySelectorAll("a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function() {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      });
+    }
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMenu);
+  } else {
+    initMenu();
+  }
+})();
+</script>
 </body>
 </html>

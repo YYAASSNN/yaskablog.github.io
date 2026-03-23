@@ -271,20 +271,16 @@
 <div class="page-hero">
   <div class="page-hero-tag">Get in Touch</div>
   <h1>Contact Us</h1>
-  <p>Questions, feedback, editorial enquiries, or partnerships — we’d love to hear from you.</p>
+  <p>Questions, feedback or partnerships — we'd love to hear from you.</p>
 </div>
 
 <div class="article-wrap">
 <div class="divider"></div>
-<p>Have a question, partnership enquiry, correction request, or business message? You can contact Yaskka using the form below or by email at <a href="mailto:hello@yaskka.com">hello@yaskka.com</a>. We usually respond within 1–2 business days.</p>
-<p>Yaskka is an independent content website covering business, marketing, and digital product reviews. We do not provide direct customer support for third-party products or services featured on this website. For billing, login, or account issues, please contact the provider directly.</p>
-<div class="contact-direct" style="background:#f9f9f9;border:1px solid #e8e8e8;border-radius:14px;padding:24px 28px;margin:26px 0 30px;">
-  <h3 style="font-family:'Playfair Display',serif;font-size:20px;color:#0d1b2a;margin-bottom:8px;">Direct Contact</h3>
-  <p style="margin-bottom:6px;">Email: <a href="mailto:hello@yaskka.com">hello@yaskka.com</a></p>
-  <p style="margin-bottom:0;">For partnerships, editorial enquiries, corrections, or general questions.</p>
+<p>Have a question, feedback, or business enquiry? Fill in the form below or reach us directly by email.</p>
+<p><strong>For partnerships, media, or support:</strong> <a href="mailto:hello@yaskka.com">hello@yaskka.com</a></p>
+<p>We usually reply within 2 business days.</p>
+<p style="font-size:13px;color:#777;">Yaskka is an independent content website. We do not provide direct customer support for third-party products or services.</p>
 </div>
-
-  </div>
 
 <div class="contact-form">
   <div class="form-row">
@@ -300,9 +296,8 @@
     <textarea placeholder="Write your message here..."></textarea>
   </div>
   <div style="text-align:center;">
-    <button class="btn-submit" type="button">Send Message</button>
+    <button class="btn-submit" type="button" onclick="this.textContent='Sent! We'll be in touch.';this.disabled=true;">Send Message</button>
   </div>
-  <p class="cf-note" style="font-size:12.5px;color:#777;margin-top:16px;line-height:1.7;text-align:center;">By contacting us, you may provide your name, email address, and message details so we can respond to your enquiry. We use this information only for contact and support purposes.</p>
 </div>
 </div>
 
@@ -338,5 +333,47 @@
     <a href="affiliate-disclosure.html" style="color:#ffffff;text-decoration:none;">Affiliate Disclosure</a>
   </div>
 </footer>
+<script>
+(function() {
+  function initMenu() {
+    var btn = document.getElementById("hamburgerBtn");
+    var menu = document.getElementById("mobileMenu");
+    if (!btn || !menu) return;
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.contains("open");
+      if (isOpen) {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      } else {
+        menu.classList.add("open");
+        btn.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+    });
+    document.addEventListener("click", function(e) {
+      if (menu.classList.contains("open") && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    });
+    var links = menu.querySelectorAll("a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function() {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      });
+    }
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMenu);
+  } else {
+    initMenu();
+  }
+})();
+</script>
 </body>
 </html>

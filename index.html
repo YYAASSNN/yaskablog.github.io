@@ -106,30 +106,27 @@
   }
   .trending-links a:hover { background:var(--accent); color:var(--navy); border-color:var(--accent); }
 
-  /* ROW 3 — Price/stats ticker scroller */
+  /* ROW 3 — Scrollable stats bar */
   .header-row3 {
-    background:#0a1520; padding:0; height:36px; overflow:hidden; display:flex; align-items:center;
+    background:#0a1520; padding:0; height:36px; overflow-x:auto; overflow-y:hidden; display:flex; align-items:center;
     border-top:1px solid rgba(255,255,255,0.06);
+    scrollbar-width:none; -ms-overflow-style:none;
   }
+  .header-row3::-webkit-scrollbar { display:none; }
   .ticker-track {
-    display:flex; align-items:center; gap:0;
-    white-space:nowrap; animation:tickerScroll 40s linear infinite;
+    display:flex; align-items:center; gap:0; flex-shrink:0;
+    white-space:nowrap;
   }
-  .ticker-track:hover { animation-play-state:paused; }
   .ticker-item {
     display:inline-flex; align-items:center; gap:8px;
     padding:0 28px; font-size:11.5px; font-weight:600; color:rgba(255,255,255,0.75);
-    border-right:1px solid rgba(255,255,255,0.08);
+    border-right:1px solid rgba(255,255,255,0.08); flex-shrink:0;
   }
   .ticker-item .t-label { color:#e8c547; font-weight:600; }
   .ticker-item .t-val { color:#ffffff; font-weight:500; }
   .ticker-item .t-up { color:#2ecc71; font-weight:700; }
   .ticker-item .t-dn { color:#e74c3c; font-weight:700; }
   .ticker-item .t-neu { color:#2ecc71; font-weight:700; }
-  @keyframes tickerScroll {
-    0% { transform:translateX(0); }
-    100% { transform:translateX(-50%); }
-  }
 
   /* Mobile hamburger */
   .hamburger-btn { display:none; background:none; border:none; cursor:pointer; padding:8px; }
@@ -141,8 +138,10 @@
     .header-row1 nav { display:none; }
     .hamburger-btn { display:block; }
     .header-row2 { padding:0 20px; }
-    .trending-links a:nth-child(n+5) { display:none; }
-    .header-row3 { display:none; }
+    .trending-links { overflow-x:auto; flex-wrap:nowrap; scrollbar-width:none; -ms-overflow-style:none; }
+    .trending-links::-webkit-scrollbar { display:none; }
+    .trending-links a { flex-shrink:0; }
+    .header-row3 { display:flex; overflow-x:auto; }
     .mobile-menu {
       display:none; position:fixed; top:64px; left:0; right:0; bottom:0;
       background:var(--navy); z-index:300; overflow-y:auto; padding:20px;
@@ -673,15 +672,6 @@
       <div class="ticker-item"><span class="t-label">Digital Setup</span><span class="t-val">Under $30/mo</span><span class="t-up">↑ Best Value</span></div>
       <div class="ticker-item"><span class="t-label">Email Marketing</span><span class="t-val">42x ROI Average</span><span class="t-up">↑ Must-Read</span></div>
       <div class="ticker-item"><span class="t-label">Video Content</span><span class="t-val">Short-form Surging</span><span class="t-up">↑ Hot</span></div>
-      <!-- duplicate for seamless loop -->
-      <div class="ticker-item"><span class="t-label">Hostinger</span><span class="t-val">from $2.99/mo</span><span class="t-up">↑ #1 Pick</span></div>
-      <div class="ticker-item"><span class="t-label">NordVPN</span><span class="t-val">6,000+ Servers</span><span class="t-up">↑ Top Rated</span></div>
-      <div class="ticker-item"><span class="t-label">Airalo eSIM</span><span class="t-val">200+ Countries</span><span class="t-neu">from $4.50</span></div>
-      <div class="ticker-item"><span class="t-label">AI Tools</span><span class="t-val">Builder in 60 sec</span><span class="t-up">↑ Trending</span></div>
-      <div class="ticker-item"><span class="t-label">SEO 2026</span><span class="t-val">Google Core Update</span><span class="t-dn">↓ Traffic Alert</span></div>
-      <div class="ticker-item"><span class="t-label">Digital Setup</span><span class="t-val">Under $30/mo</span><span class="t-up">↑ Best Value</span></div>
-      <div class="ticker-item"><span class="t-label">Email Marketing</span><span class="t-val">42x ROI Average</span><span class="t-up">↑ Must-Read</span></div>
-      <div class="ticker-item"><span class="t-label">Video Content</span><span class="t-val">Short-form Surging</span><span class="t-up">↑ Hot</span></div>
     </div>
   </div>
 
@@ -939,7 +929,7 @@
     <div class="about-text">
       <div class="section-label">About Yaskka</div>
       <h2>Real insights for<br><span>real businesses</span></h2>
-      <p>Yaskka is built for business owners, marketers, and entrepreneurs who want clear, actionable content. From AI tools to hosting reviews, we research, compare, and evaluate digital products so you can make more confident decisions.</p>
+      <p>Yaskka is built for business owners, marketers, and entrepreneurs who want clear, actionable content. From AI tools to hosting reviews — we test everything so you don't have to.</p>
       <a href="business.html" class="btn-primary">Start Reading</a>
     </div>
   </div>
@@ -950,7 +940,8 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="index.html" class="logo" style="text-decoration:none !important;">Yaskka</a>
-      <p>Your go-to source for business, marketing, and honest tech reviews in 2026.</p>
+      <p>Your go-to source for business, marketing, and digital product reviews in 2026.</p>
+      <p style="margin-top:6px;font-size:12px;"><a href="mailto:hello@yaskka.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">hello@yaskka.com</a></p>
     </div>
     <div class="footer-col">
       <h5>Content</h5>

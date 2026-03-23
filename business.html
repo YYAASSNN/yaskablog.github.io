@@ -608,6 +608,11 @@
 
 </div>
 
+<div class="article-wrap" style="padding-top:0;padding-bottom:32px;">
+  <p style="font-size:12px;color:#888;margin-bottom:8px;"><em>Last updated: January 2026</em></p>
+  <p style="font-size:13px;color:#666;border-top:1px solid #eee;padding-top:16px;">This article is published by <a href="about.html">Yaskka</a>, an independent content website covering business, marketing, and digital product reviews. Content is researched and written with editorial independence. Some pages on this site contain affiliate links — see our <a href="affiliate-disclosure.html">Affiliate Disclosure</a> for details.</p>
+</div>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -640,5 +645,47 @@
     <a href="affiliate-disclosure.html" style="color:#ffffff;text-decoration:none;">Affiliate Disclosure</a>
   </div>
 </footer>
+<script>
+(function() {
+  function initMenu() {
+    var btn = document.getElementById("hamburgerBtn");
+    var menu = document.getElementById("mobileMenu");
+    if (!btn || !menu) return;
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      var isOpen = menu.classList.contains("open");
+      if (isOpen) {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      } else {
+        menu.classList.add("open");
+        btn.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+    });
+    document.addEventListener("click", function(e) {
+      if (menu.classList.contains("open") && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    });
+    var links = menu.querySelectorAll("a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function() {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+        document.body.style.overflow = "";
+      });
+    }
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMenu);
+  } else {
+    initMenu();
+  }
+})();
+</script>
 </body>
 </html>
