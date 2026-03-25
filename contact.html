@@ -275,29 +275,35 @@
 </div>
 
 <div class="article-wrap">
-<div class="divider"></div>
-<p>Have a question, feedback, or business enquiry? Fill in the form below or reach us directly:</p>
-<p><strong>For partnerships, media, or support:</strong> <a href="mailto:hello@yaskka.com">hello@yaskka.com</a></p>
-<p>We usually reply within 2 business days.</p>
-<p style="font-size:13px;color:#777;">Yaskka is an independent content website. We do not provide direct customer support for third-party products or services.</p>
+  <div class="divider"></div>
 
-<div class="contact-form">
-  <div class="form-row">
-    <label>Name</label>
-    <input type="text" placeholder="Your name">
+  <h2>Get in Touch</h2>
+  <p>We'd love to hear from you. Whether you have a question about one of our reviews, want to suggest a tool we should cover, or have a business enquiry — just send us an email and we'll get back to you.</p>
+
+  <!-- Email Card -->
+  <div style="background:#f9f9f9; border:1px solid #e8e8e8; border-left:4px solid #e8c547; border-radius:10px; padding:24px 28px; margin:28px 0; display:flex; align-items:center; gap:18px;">
+    <div style="background:#0d1b2a; border-radius:50%; width:44px; height:44px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8c547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </div>
+    <div>
+      <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0d1b2a; margin-bottom:4px;">Email Us</div>
+      <a href="mailto:hello@yaskka.com" style="font-size:16px; font-weight:600; color:#0d1b2a;">hello@yaskka.com</a>
+      <div style="font-size:13px; color:#777; margin-top:3px;">We respond within 24–48 hours, Monday to Friday.</div>
+    </div>
   </div>
-  <div class="form-row">
-    <label>Email</label>
-    <input type="email" placeholder="your@email.com">
-  </div>
-  <div class="form-row">
-    <label>Message</label>
-    <textarea placeholder="Write your message here..."></textarea>
-  </div>
-  <div style="text-align:center;">
-    <button class="btn-submit" type="button">Send Message</button>
-  </div>
-</div>
+
+  <h2>What Can You Contact Us About?</h2>
+  <ul>
+    <li>Questions about our reviews or guides</li>
+    <li>Tool or product suggestions</li>
+    <li>Affiliate or partnership enquiries</li>
+    <li>Corrections or feedback on our content</li>
+    <li>General questions about Yaskka</li>
+  </ul>
+
+  <h2>About Yaskka</h2>
+  <p>Yaskka is an independent website that researches and compares digital tools, online platforms, and services. Our goal is to help you make informed decisions based on clear and useful information.</p>
+  <p>Some links on this site are affiliate links. This means we may earn a small commission at no extra cost to you. This never influences our reviews or recommendations.</p>
 
 </div>
 
@@ -333,7 +339,7 @@
     <a href="affiliate-disclosure.html" style="color:#ffffff;text-decoration:none;">Affiliate Disclosure</a>
   </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function() {
   var btn = document.getElementById('hamburgerBtn');
   var menu = document.getElementById('mobileMenu');
@@ -354,21 +360,4 @@
   });
 
   document.addEventListener('click', function(e) {
-    if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
-
-  menu.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-})();
-</script>
-</body>
-</html>
+    if (menu.classList.c
