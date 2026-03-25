@@ -281,9 +281,6 @@
 <p>We usually reply within 2 business days.</p>
 <p style="font-size:13px;color:#777;">Yaskka is an independent content website. We do not provide direct customer support for third-party products or services.</p>
 
-    
-  </div>
-
 <div class="contact-form">
   <div class="form-row">
     <label>Name</label>
@@ -301,6 +298,7 @@
     <button class="btn-submit" type="button">Send Message</button>
   </div>
 </div>
+
 </div>
 
 <footer>
@@ -363,4 +361,14 @@
     }
   });
 
-  menu.querySelectorAll(
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+</body>
+</html>
